@@ -11,11 +11,11 @@ def height
 puts 'The tree is ' + @tall.to_s + ' feet tall.'
 end
 
-def count_the_oranges
+def countTheOranges
 puts 'The tree has ' + @fruit.to_s + ' oranges.'
 end
 
-def pick_an_orange
+def pickAnOrange
 if @fruit < 1
 puts 'Sorry, there are no oranges to pick this year.'
 else
@@ -24,7 +24,7 @@ puts 'You pick an orange from the tree. It\'s very delicious.'
 end
 end
 
-def one_year_passes
+def oneYearPasses
 puts 'One year passes'
 @age = @age + 1
 @tall = @tall + 1
@@ -54,38 +54,38 @@ end
 puts ''
 tree = OrangeTree.new
 tree.height
-tree.count_the_oranges
-tree.pick_an_orange
+tree.countTheOranges
+tree.pickAnOrange
 puts ''
-tree.one_year_passes
+tree.oneYearPasses
 tree.height
-tree.count_the_oranges
-tree.pick_an_orange
+tree.countTheOranges
+tree.pickAnOrange
 puts ''
-tree.one_year_passes
-tree.one_year_passes
+tree.oneYearPasses
+tree.oneYearPasses
 tree.height
-tree.count_the_oranges
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.count_the_oranges
+tree.countTheOranges
+tree.pickAnOrange
+tree.pickAnOrange
+tree.pickAnOrange
+tree.pickAnOrange
+tree.pickAnOrange
+tree.pickAnOrange
+tree.countTheOranges
 puts ''
-tree.one_year_passes
+tree.oneYearPasses
 tree.height
-tree.count_the_oranges
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.count_the_oranges
-tree.pick_an_orange
-tree.count_the_oranges
+tree.countTheOranges
+tree.pickAnOrange
+tree.pickAnOrange
+tree.pickAnOrange
+tree.countTheOranges
+tree.pickAnOrange
+tree.countTheOranges
 puts ''
-tree.one_year_passes
+tree.oneYearPasses
 tree.height
-tree.count_the_oranges
+tree.countTheOranges
 puts ''
-tree.one_year_passes
+tree.oneYearPasses

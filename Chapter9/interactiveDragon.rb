@@ -3,8 +3,8 @@ class Dragon
   def initialize name
       @name = name
       @asleep = false
-      @stuff_in_belly = 10 # he's full
-      @stuff_in_intestine = 0 # doesn't need to go
+      @stuffInBelly = 10 # he's full
+      @stuffInIntestine = 0 # doesn't need to go
 
       puts @name + ' is born.'
   end
@@ -12,24 +12,24 @@ class Dragon
 # Feed
   def feed
       puts 'You feed ' + @name + '.'
-      @stuff_in_belly = 10
-      passage_of_time
+      @stuffInBelly = 10
+      passageOfTime
   end
 
 # Walk
   def walk
       puts 'You walk ' + @name + '.'
-      @stuff_in_intestine = 0
-      passage_of_time
+      @stuffInIntestine = 0
+      passageOfTime
   end
 
 # Put to bed
-  def put_to_bed
+  def putToBed
       puts 'You put ' + @name + ' to bed.'
       @asleep = true
       3. times do
         if @asleep
-          passage_of_time
+          passageOfTime
         end
         if @asleep
           puts @name + ' snores, filling the room with smoke.'
@@ -46,7 +46,7 @@ class Dragon
   def toss
       puts 'You toss ' + @name + ' up into the air.'
       puts 'He giggles, which singes your eyebrows.'
-      passage_of_time
+      passageOfTime
   end
 
 # Rock
@@ -54,7 +54,7 @@ class Dragon
       puts 'You rock ' + @name + ' gently.'
       @asleep = true
       puts 'He briefly dozes off...'
-      passage_of_time
+      passageOfTime
 
       if @asleep
         @asleep = false
@@ -68,20 +68,20 @@ private
 
 # hungry?
   def hungry?
-    @stuff_in_belly <= 2
+    @stuffInBelly <= 2
   end
 
 # poopy?
   def poopy?
-    @stuff_in_intestine >= 8
+    @stuffInIntestine >= 8
   end
 
 # passage of time, this is when things happen
-  def passage_of_time
-    if @stuff_in_belly > 0
+  def passageOfTime
+    if @stuffInBelly > 0
 # move food from belly to intestine
-      @stuff_in_belly = @stuff_in_belly - 1
-      @stuff_in_intestine = @stuff_in_intestine + 1
+      @stuffInBelly = @stuffInBelly - 1
+      @stuffInIntestine = @stuffInIntestine + 1
     else
       if @asleep
          @asleep = false
@@ -91,8 +91,8 @@ private
     exit
     end
 
-    if @stuff_in_intestine >= 10
-       @stuff_in_intestine = 0
+    if @stuffInIntestine >= 10
+       @stuffInIntestine = 0
        puts 'Whoops! ' + @name + ' had an accident...'
     end
 
@@ -126,8 +126,8 @@ if command == 'feed'
 pet.feed
 elsif command == 'walk'
 pet.walk
-elsif command == 'put_to_bed'
-pet.put_to_bed
+elsif command == 'putToBed'
+pet.putToBed
 elsif command == 'toss'
 pet.toss
 elsif command == 'rock'
